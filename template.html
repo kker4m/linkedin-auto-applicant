@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kerem Mert Izmir - Resume</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --light-bg: #f5f5f5;
+            --border-color: #ddd;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        header {
+            text-align: center;
+            padding-bottom: 30px;
+            border-bottom: 2px solid var(--secondary-color);
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.5em;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+        
+        h2 {
+            color: var(--secondary-color);
+            font-size: 1.8em;
+            margin: 25px 0 15px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.3em;
+            margin-top: 20px;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 15px;
+            font-size: 0.95em;
+        }
+        
+        .contact-info p {
+            margin: 0;
+        }
+        
+        .contact-info i {
+            margin-right: 5px;
+            color: var(--secondary-color);
+        }
+        
+        .summary {
+            background-color: var(--light-bg);
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            border-left: 4px solid var(--secondary-color);
+        }
+        
+        .experience-item, .project-item {
+            margin-bottom: 25px;
+        }
+        
+        .date-location {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        
+        ul li {
+            position: relative;
+            margin-bottom: 8px;
+            padding-left: 20px;
+        }
+        
+        ul li:before {
+            content: "•";
+            color: var(--secondary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .tech-category {
+            flex: 1 1 200px;
+            background-color: var(--light-bg);
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        
+        .tech-category h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .tech-category ul {
+            padding-left: 0;
+        }
+        
+        .tech-category ul li {
+            padding-left: 0;
+            margin-bottom: 5px;
+        }
+        
+        .tech-category ul li:before {
+            display: none;
+        }
+        
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .project-item {
+            background-color: var(--light-bg);
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid var(--accent-color);
+        }
+        
+        .project-item strong {
+            color: var(--primary-color);
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .education {
+            background-color: var(--light-bg);
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+        
+        .languages {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .language-item {
+            background-color: var(--light-bg);
+            padding: 10px 15px;
+            border-radius: 5px;
+            flex: 1 1 200px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+            
+            .projects {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Kerem Mert Izmir</h1>
+            <h2>Junior Full Stack Developer</h2>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> keremmertizmir39@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +905555555555</p>
+                <p><i class="fas fa-map-marker-alt"></i> Turkey/Ankara</p>
+            </div>
+        </header>
+        
+        <div class="summary">
+            <p>Motivated and skilled Computer Engineering graduate with hands-on experience in ASP.NET Core, microservice architecture, and AI-powered applications. Successfully led software projects, completed a data-focused internship at TÜBİTAK, and contributed to various academic and freelance projects including voice assistants and satellite image analysis. Passionate about dynamic web solutions and continuous learning, with a strong presence in the Turkish tech community through a YouTube channel reaching nearly 5,000 subscribers.</p>
+        </div>
+        
+        <h2>Work Experience</h2>
+        <div class="experience-item">
+            <h3>Junior Fullstack Developer</h3>
+            <div class="date-location">February 2025 – Ongoing, DefSoft</div>
+            <ul>
+                <li>Developed and deployed AI-powered solutions such as image generators and voice assistants, customizing models, containerizing them with Docker, and exposing them as APIs for seamless integration into projects.</li>
+                <li>Built and maintained the web platform of an application with over 40,000 users, ensuring scalability, reliability, and efficient user experience.</li>
+            </ul>
+        </div>
+        
+        <div class="experience-item">
+            <h3>Fullstack Developer</h3>
+            <div class="date-location">February 2025 – Ongoing, DGH Yazılım</div>
+            <ul>
+                <li>Implemented a proof of concept for a new streaming data channel from vehicle to backend. Designed a data ingest architecture for fleet monitoring based on latency metrics which would become the seed of a new product called "Vehicle Operation Services", to which I am assigned as a Data Engineer.</li>
+            </ul>
+        </div>
+        
+        <div class="experience-item">
+            <h3>Fullstack Backend Developer</h3>
+            <div class="date-location">September 2024 – December 2024, MTY Marka Tasarla</div>
+            <ul>
+                <li>Led the development of scalable SaaS applications using ASP.NET Core, microservice architecture, and multi-tenant structures, serving over 3,000 active users. Automated deployments with Docker and Kubernetes, improving system reliability and reducing deployment times.</li>
+                <li>Oversaw end-to-end development processes including database design, backend integration with JavaScript, and team leadership. Managed technical decisions, workflow organization, and performance optimizations to boost software quality and customer satisfaction.</li>
+            </ul>
+        </div>
+        
+        <div class="experience-item">
+            <h3>Backend Developer</h3>
+            <div class="date-location">December 2023 – June 2024, BEKO Global</div>
+            <ul>
+                <li>Developed software solutions for internal digital transformation projects using ASP.NET Core and C#, including a mail automation system that reduced communication time by 50%.</li>
+                <li>Improved backend code quality through analysis, testing, and reliability-focused optimizations, while also contributing to project management and workflow planning.</li>
+            </ul>
+        </div>
+        
+        <h2>Tech Stack</h2>
+        <div class="tech-stack">
+            <div class="tech-category">
+                <h4>Cloud Services</h4>
+                <ul>
+                    <li>AWS EC2</li>
+                    <li>AWS Lambda</li>
+                    <li>Supabase</li>
+                    <li>Docker</li>
+                    <li>Kubernetes</li>
+                </ul>
+            </div>
+            
+            <div class="tech-category">
+                <h4>Web Development</h4>
+                <ul>
+                    <li>Next.js</li>
+                    <li>React</li>
+                    <li>JavaScript</li>
+                    <li>TypeScript</li>
+                    <li>Tailwind CSS</li>
+                </ul>
+            </div>
+            
+            <div class="tech-category">
+                <h4>Backend Development</h4>
+                <ul>
+                    <li>ASP.NET Core</li>
+                    <li>C#</li>
+                    <li>PostgreSQL</li>
+                    <li>Nodejs Express</li>
+                </ul>
+            </div>
+            
+            <div class="tech-category">
+                <h4>Machine Learning / AI</h4>
+                <ul>
+                    <li>Fal.AI</li>
+                    <li>Python</li>
+                    <li>TensorFlow</li>
+                    <li>PyTorch</li>
+                    <li>NumPy, Pandas</li>
+                    <li>Matplotlib</li>
+                </ul>
+            </div>
+        </div>
+        
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="project-item">
+                <strong>Janus Pro</strong>
+                <p>A cloud-based AI-powered text-to-image SaaS project developed using Next.js, Supabase, and Fal.AI. Users can register via Google and generate images from text using either free or purchased credits.</p>
+            </div>
+            
+            <div class="project-item">
+                <strong>Earthquake Prediction</strong>
+                <p>Developed at İnönü University using AI, Next.js, and PostgreSQL. The AI model, trained with historical data from AFAD (Disaster and Emergency Management Authority), predicts future earthquakes. The project, presented as a graduation project, received a perfect score.</p>
+            </div>
+            
+            <div class="project-item">
+                <strong>Illegal Building Detection</strong>
+                <p>Developed at İnönü University using Next.js, C#, and PostgreSQL. The app retrieves real-time and historical satellite images from Google Earth based on user-selected coordinates. An AI model trained on 300,000 satellite images detects unauthorized structures. The project received a perfect score.</p>
+            </div>
+            
+            <div class="project-item">
+                <strong>Giyim360</strong>
+                <p>A fully integrated e-commerce platform developed using C#, Python, PostgreSQL, Redis, Multi-Tenant Architecture, and JavaScript. The platform includes customer and admin dashboards and a unique feature that allows users to preview clothing using camera-based image processing. Despite its completion, the project was not launched.</p>
+            </div>
+        </div>
+        
+        <h2>Education</h2>
+        <div class="education">
+            <h3>B.Sc. Computer Engineering</h3>
+            <div class="date-location">Sep 2021 – Jun 2025, İnönü University</div>
+            <p>GPA: 3.35 / 4.00</p>
+        </div>
+        
+        <h2>Languages</h2>
+        <div class="languages">
+            <div class="language-item">
+                <strong>English:</strong> Semi-professional qualification
+            </div>
+            <div class="language-item">
+                <strong>Turkish:</strong> Native
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
